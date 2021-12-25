@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Manipulation</title>
+        
+    </head>
+    <body>
+    <div class = "row" id ="pageHeaderRow">
+        <div class = "col-12" id = "pageHeaderDiv">
+        <h1 id="pageHeader">DOM Manipulation</h1>
+        </div>
+    </div>
+    <div class= "row">
+        <div class= "col-12" id = "activityListDiv">
+            <h2 id="activityListHeader">Activities:</h2>
+        <ol id = "activityList">
+            <li>Modify existing elements
+                <ol>
+                    <li>Change content </li>
+                    <li>Change attribute values</li>
+                </ol>
+            </li>
+            <li>Add elements</li>
+            <li id = "modifyMe">Modify me!</li>
+            <li id="removeMe">Remove Me!</li>
+        </ol>
+        </div>
+    </div>
+    <div class= "row">
+        <div class= "col-12" id = "formExample">
+            <form id ="formElement">
+                <label for ="nameInput">Name</label>
+                <input type="text" id = "nameInput" name="name"/>
+                <input type ="submit"/>
+            </form>
+        </div>
+    </div>
+    <div class = "row">
+        <div class="col-12" id = "inputValues">
+        </div>
+    </div>
+    <div class="row">
+        <div class = "col-12" id ="favoriteColorFormParent">
+            <!--Your turn Add another form here -->
+        </div>
+    </div>
+    <script>
+        let activitiesListHeader = document.getElementById("activityListHeader");
+        //console.log(activitiesListHeader);
+        activitiesListHeader.innerHTML = "Lab Assignment";
+
+        let modifyMe = document.getElementById("modifyMe");
+        console.log(modifyMe);
+        modifyMe.innerHTML = "A snail can sleep for three years";
+
+        let p= document.createElement ("p");
+        p.innerHTML ="Elephants are the only animal that can't jump";
+        let element=document.getElementById("activityList");
+        element.appendChild(p);
+        
+
+
+let removeMe = document.getElementById("removeMe");
+let li=document.getElementById('activityList')
+li.removeChild(removeMe);
+
+let listItems = document.getElementsByTagName("li");
+let item = listItems[i];
+    console.log(item);
+item.setAttribute("class", "greyText");
+    </script>
+    </body>
+</html>
